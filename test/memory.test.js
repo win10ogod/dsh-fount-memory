@@ -30,7 +30,7 @@ test('episode keys are idempotent and temporal relevance uses explicit event dat
   const episode = { sessionId: 's1', turn: 1, text: 'user: I moved in 2022-06', terms: terms('moved 2022'), focus: terms('moved 2022'), eventDates: explicitPeriods('2022-06') }
   assert.equal(store.saveEpisode(episode), true)
   assert.equal(store.saveEpisode(episode), false)
-  const recalled = selectRecall([], store.episodes(), 'When did I move in 2022?', { threshold: 5, date: new Date('2026-09-26') })
+  const recalled = selectRecall([], store.episodes(), 'When did I move in 2022?', { count: 3, threshold: 5, date: new Date('2026-09-26') })
   assert.equal(recalled.episodes.length, 1)
   assert.equal(store.forgetEpisodes('moved'), 1)
   assert.equal(store.episodes().length, 0)

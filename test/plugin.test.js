@@ -37,7 +37,7 @@ test('two completed turns recall in-place with v4 source and never schedule anot
   assert.deepEqual(validateJsonSchemaValue(tools.get('fount_memory_remember').output.schema, remembered), [])
   event('assistant/message', { message: { content: [{ type: 'text', text: 'I will remember the Fount project.' }] } })
   event('turn/end', { turn: 1, reason: { kind: 'completed' } })
-  const searched = await tools.get('fount_memory_search').execute({ query: 'Fount' }, { agent })
+  const searched = await tools.get('fount_memory_search').execute({ query: 'Fount', includeEpisodes: true }, { agent })
   assert.deepEqual(validateJsonSchemaValue(tools.get('fount_memory_search').output.schema, searched), [])
   assert.equal(searched.episodes.length, 1)
 
