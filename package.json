@@ -1,6 +1,6 @@
 {
   "name": "dsh-fount-memory",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Fount-inspired, in-turn memory for DeepSeek Harness",
   "repository": {
     "type": "git",
@@ -20,7 +20,13 @@
     "LICENSE"
   ],
   "license": "MIT",
-  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "memory", "fount"],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "fount"
+  ],
   "engines": {
     "node": ">=22.13.0"
   },
@@ -31,7 +37,7 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "~4.0.4",
-    "@deepseek-ai/dsh-llm": "0.1.7-rc.2"
+    "@deepseek-ai/dsh-llm": "0.1.7-rc.2 || 0.2.0-rc.2"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "~3.18.4"
@@ -42,7 +48,7 @@
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "~4.0.4",
-    "@deepseek-ai/dsh-llm": "0.1.7-rc.2",
-    "@deepseek-ai/dsh-tools": "0.1.7-rc.2"
+    "@deepseek-ai/dsh-llm": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tools": "0.2.0-rc.2"
   }
 }
