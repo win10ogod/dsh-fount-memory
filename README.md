@@ -1,6 +1,6 @@
 # dsh-fount-memory
 
-參考 Fount 角色的長短期記憶設計，為 DeepSeek Harness 提供持久記憶。已針對 DSH `0.1.7-rc.2` 與 `0.2.0-rc.2` 的插件與 format v4 訊息介面開發。
+參考 Fount 角色的長短期記憶設計，為 DeepSeek Harness 提供持久記憶。已針對 DSH `0.1.7-rc.2`、`0.2.0-rc.2` 與 `0.2.1-alpha.1` 的插件與 format v4 訊息介面開發。
 
 記憶在原本的對話中運作：模型請求前帶入符合條件的命名事實記憶。預設不自動注入過往對話軌跡。插件不建立反思或 dream 輪次，不呼叫 `agent.followup()`、`agent.steer()`，也不在空閒時恢復會話。儲存與檢索都在本機進行，不額外呼叫模型。
 
